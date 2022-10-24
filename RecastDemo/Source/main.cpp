@@ -111,9 +111,12 @@ int main(int /*argc*/, char** /*argv*/)
 	}
 	else
 	{
-		float aspect = 16.0f / 9.0f;
-		width = rcMin(displayMode.w, (int)(displayMode.h * aspect)) - 80;
-		height = displayMode.h - 80;
+		int widthDisplay = 1600;
+		float aspect = 9.0f / 16.0f;
+		//width = rcMin(displayMode.w, (int)(displayMode.h * aspect)) - 80;
+		//height = displayMode.h - 80;
+		width = widthDisplay;
+		height = widthDisplay * aspect;
 	}
 	
 	SDL_Window* window;
